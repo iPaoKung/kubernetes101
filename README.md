@@ -1,5 +1,5 @@
 # Kubernetes 101
-## DEPLOYMENT
+## DEPLOYMENTS
 ##### Information of Deployments and POD
 ```
 kubectl get deployment
@@ -12,7 +12,7 @@ kubectl kubectl scale --replicas=3 deployment [DEPLOYMENT NAME]
 ```
 kubectl kubectl scale --replicas=3 deployment [DEPLOYMENT NAME]
 ```
-## SERVICE
+## SERVICES
 ##### Information of Services
 ```
 kubectl get svc
@@ -25,3 +25,5 @@ curl -v http://localhost:8080/api/v1/namespaces/default/services/[SERVICE NAME]/
 kubectl port-forward [POD NAME] [EXTERNAL PORT]:[INTERNAL PORT]
 curl http://localhost:8080/status/200
 ```
+
+## NAMESPACES
