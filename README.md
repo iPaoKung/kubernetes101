@@ -27,3 +27,9 @@ curl http://localhost:8080/status/200
 ```
 
 ## NAMESPACES
+```
+kubectl get namespace [NS NAME]
+kubectl create namespace [NS NAME]
+kubectl get -n [NS NAME] pod
+curl -v [SERVICE NAME].[NS NAME].svc.cluster.local/status/200
+```
