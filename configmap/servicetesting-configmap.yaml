@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: appconfig
 data:
-  test.conf: "overide again !!!"
+  test.yaml: "overide again"
   config.yaml: |-
      service: 
          version: "hello world"

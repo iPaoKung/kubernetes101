@@ -16,13 +16,18 @@ spec:
     spec:
       containers:
       - name: servicetesting
-        #image: sal2apao/servicetesting:0.0.2-alpine
-        image: nginx:latest
+        image: sal2apao/servicetesting:0.0.2-alpine
+        #image: nginx:latest
         ports:
         - containerPort: 1323
         volumeMounts:
         - name: config-vol
           mountPath: /config
+        #env:
+        # Define the environment variable
+        #- name: SERVICE_VERSION
+          #value: "Overide Again!!!"
+      restartPolicy: Always
       volumes:
       - name: config-vol
         configMap:
