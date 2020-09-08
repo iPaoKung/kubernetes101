@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicetesting-deployment
+  labels:
+    app: servicetesting
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servicetesting
+  template:
+    metadata:
+      labels:
+        app: servicetesting
+    spec:
+      containers:
+      - name: servicetesting
+        #image: sal2apao/servicetesting:0.0.2-alpine
+        image: nginx:latest
+        ports:
+        - containerPort: 1323
+        volumeMounts:
+        - name: config-vol
+          mountPath: /config
+      volumes:
+      - name: config-vol
+        configMap:
+          name: appconfig
