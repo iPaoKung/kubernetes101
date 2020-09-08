@@ -34,5 +34,6 @@ kubectl get -n [NS NAME] pod
 curl -v http://[SERVICE NAME].[NS NAME].svc.cluster.local/status/200
 ```
 ## CONFIGMAP
-ENVNAME IS SERVICE_VERSION
-FILENAME AND PATH IS /config/config.yaml
+ENVNAME is SERVICE_VERSION
+
+FILENAME and PATH is /config/config.yaml
