@@ -36,5 +36,5 @@ curl -v http://[SERVICE NAME].[NS NAME].svc.cluster.local/status/200
 ## CONFIGMAP
 ```
 Environment name is "SERVICE_VERSION"
-Filename and PATH is "/config/config.yaml"
+Filename and Path is "/config/config.yaml"
 ```
