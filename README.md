@@ -33,7 +33,7 @@ kubectl create namespace [NS NAME]
 kubectl get -n [NS NAME] pod
 curl -v http://[SERVICE NAME].[NS NAME].svc.cluster.local/status/200
 ```
-## CONFIGMAP
+## CONFIGMAPS & SECRETMAPS
 ```
 Environment name is "SERVICE_VERSION"
 Filename and Path is "/config/config.yaml"
