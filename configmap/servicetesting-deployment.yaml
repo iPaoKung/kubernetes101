@@ -23,10 +23,29 @@ spec:
         volumeMounts:
         - name: config-vol
           mountPath: /config
-        #env:
-        # Define the environment variable
-        #- name: SERVICE_VERSION
-          #value: "Overide Again!!!"
+        env:
+        #Define the environment variable
+        #- name: HOST
+        #  value: "https://httpbin.org"
+        #- name: PORT
+        #  value: ""
+        #- name: URI
+        #  value: "/status"
+        - name: HOST
+          valueFrom:
+            configMapKeyRef:
+              name: env-config
+              key: HOST
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: env-config
+              key: PORT
+        - name: URI
+          valueFrom:
+            configMapKeyRef:
+              name: env-config
+              key: URI
       restartPolicy: Always
       volumes:
       - name: config-vol
