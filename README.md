@@ -38,8 +38,15 @@ kubectl create namespace [NS NAME]
 kubectl get -n [NS NAME] pod
 curl -v http://[SERVICE NAME].[NS NAME].svc.cluster.local/status/200
 ```
-## CONFIGMAPS & SECRETMAPS
+## CONFIGMAPS
 ```
 Environment name is "SERVICE_VERSION"
 Filename and Path is "/config/config.yaml"
+```
+## SECRET
+```
+kubectl apply -f servicetesting-env-secret.yaml
+kubectl apply -f servicetesting-secret.yaml
+kubectl apply -f servicetesting-deployment.yaml
+kubectl apply -f servicetesting-service.yaml 
 ```
