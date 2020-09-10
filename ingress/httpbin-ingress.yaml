@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    networking.gke.io/managed-certificates: "httpbin-cert"
+    kubernetes.io/ingress.global-static-ip-name: "httpbin-ingress-ip"
+    ingress.kubernetes.io/force-ssl-redirect: "true"
+    kubernetes.io/ingress.allow-http: "false"
+  name: httpbin-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: httpbin-service
+          servicePort: 80
+        path: /*
