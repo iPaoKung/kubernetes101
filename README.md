@@ -26,6 +26,11 @@ kubectl port-forward [POD NAME] [EXTERNAL PORT]:[INTERNAL PORT]
 curl http://localhost:8080/status/200
 ```
 ##### Ingress
+```
+gcloud compute addresses create httpbin-ingress-ip --global
+kubectl apply -f httpbin-cert.yaml
+kubectl apply -f httpbin-ingress.yaml
+```
 ## NAMESPACES
 ```
 kubectl get namespace [NS NAME]
