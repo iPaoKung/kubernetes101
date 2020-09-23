@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: servicetesting
-        image: sal2apao/servicetesting:0.0.2-alpine
-        #image: nginx:latest
+        #image: sal2apao/servicetesting:0.0.2-alpine
+        image: nginx:latest
         ports:
         - containerPort: 1323
         volumeMounts:
